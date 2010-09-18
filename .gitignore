@@ -1,0 +1,10 @@
+.DS_Store
+.tmp/
+bin/
+gen/
+pkg/
+tests/bin/
+tests/gen/
+tests/local.properties
+tmp/
+local.properties
