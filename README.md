@@ -1,20 +1,30 @@
 OpenCoinage for Android
 =======================
 
-<http://opencoinage.org/>
+This is an [OpenCoinage][] client application for the [Android][] open
+mobile platform.
 
 Dependencies
 ------------
 
 ### Platform
 
-The application requires [Android 2.2][].
+The application requires and runs on the [Android 2.2][] platform. Older
+versions of the Android platform may potentially work, but are not
+supported.
 
 ### Development
 
-You are assumed to have installed the [Android SDK][] and properly
-configured an Android 2.2-compatible Android Virtual Device (AVD) named
-`android-2.2`.
+In order to build and run the development version of the application, you
+will need to have installed the [Android SDK][] and properly configured an
+Android 2.2-compatible Android Virtual Device (AVD) named `android-2.2`.
+
+The Android SDK is available for the Mac OS X, Linux, and Windows operating
+systems. In addition to the SDK, the application's build system requires the
+[Rake][] build program that typically comes bundled with the [Ruby][]
+language runtime. If you are on Mac OS X or Linux, you almost certainly
+already have Rake available; on Windows, you can obtain it from the
+[RubyInstaller for Windows](http://rubyinstaller.org/) bundle.
 
 Download
 --------
@@ -27,6 +37,18 @@ Alternatively, download the latest development version as a tarball as
 follows:
 
     $ wget http://github.com/opencoinage/opencoinage-android/tarball/master
+
+Configuration
+-------------
+
+Before you can build the application, you'll have to tell the build system
+the file system path to the Android SDK. This is done by creating a
+`local.properties` file in your working directory, as follows:
+
+    $ echo 'sdk.dir=/opt/android' > local.properties
+
+Replace the shown `/opt/android` path with the base directory where you
+installed the Android SDK on your system.
 
 Installation
 ------------
@@ -44,8 +66,8 @@ installed onto the emulator, do:
 Debugging
 ---------
 
-To review the Android emulator's system log for any warnings, errors, or
-exceptions, execute the following:
+To review the Android emulator's system log for any potentially relevant
+warnings, errors, or exceptions, do:
 
     $ rake logcat
 
@@ -60,7 +82,8 @@ Environment
 -----------
 
 The following are the default settings for environment variables that let
-you customize which virtual or physical device the Rake tasks operate on:
+you customize which virtual or physical device the aforementioned Rake tasks
+operate on:
 
     $ export ANDROID_DEVICE='android-2.2'
     $ export ANDROID_SERIAL='emulator-5554'
@@ -86,5 +109,9 @@ License
 This is free and unencumbered public domain software. For more information,
 see <http://unlicense.org/> or the accompanying `UNLICENSE` file.
 
+[OpenCoinage]: http://opencoinage.org/
+[Ruby]:        http://ruby-lang.org/
+[Rake]:        http://rake.rubyforge.org/
+[Android]:     http://en.wikipedia.org/wiki/Android_(operating_system)
 [Android SDK]: http://developer.android.com/sdk/
 [Android 2.2]: http://developer.android.com/sdk/android-2.2.html
