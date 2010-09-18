@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
   <string name="app_name">OpenCoinage</string>
+  <string name="amount">Amount</string>
+  <string name="asset">Asset</string>
+  <string name="coin">Coin</string>
+  <string name="contract">Contract</string>
+  <string name="currency">Currency</string>
+  <string name="denomination">Denomination</string>
+  <string name="exchanger">Exchanger</string>
+  <string name="issuer">Issuer</string>
+  <string name="select_currency">Select a currency</string>
+  <string name="token">Token</string>
+  <string name="total">Total</string>
+  <string name="unit">Unit</string>
+  <string name="updating">Updating...</string>
+  <string name="updated_just_now">Updated just now</string>
+  <string name="updated_1_min_ago">Updated a minute ago</string>
+  <string name="updated_x_mins_ago">Updated %d minutes ago</string>
+  <string name="updated_1_hour_ago">Updated an hour ago</string>
+  <string name="updated_x_hours_ago">Updated %d hours ago</string>
+  <string name="updated_1_day_ago">Updated yesterday</string>
+  <string name="updated_x_days_ago">Updated %d days ago</string>
 </resources>
