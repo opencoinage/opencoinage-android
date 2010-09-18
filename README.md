@@ -6,9 +6,27 @@ OpenCoinage for Android
 Dependencies
 ------------
 
-The following instructions assume that you already have the [Android SDK][]
-installed and an [Android 2.2][]-compatible Android Virtual Device (AVD)
-named `android-2.2` properly configured.
+### Platform
+
+The application requires [Android 2.2][].
+
+### Development
+
+You are assumed to have installed the [Android SDK][] and properly
+configured an Android 2.2-compatible Android Virtual Device (AVD) named
+`android-2.2`.
+
+Download
+--------
+
+To get a local working copy of the development repository, do:
+
+    $ git clone git://github.com/opencoinage/opencoinage-android.git
+
+Alternatively, download the latest development version as a tarball as
+follows:
+
+    $ wget http://github.com/opencoinage/opencoinage-android/tarball/master
 
 Installation
 ------------
@@ -56,6 +74,11 @@ Author
 ------
 
 [Arto Bendiken](mailto:arto.bendiken@gmail.com) - <http://ar.to/>
+
+Contributors
+------------
+
+Refer to the accompanying `CREDITS` file.
 
 License
 -------
