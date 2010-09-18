@@ -12,13 +12,17 @@ task :build do
   sh "ant debug"
 end
 
+file 'bin/OpenCoinage-debug.apk' do
+  sh "ant debug"
+end
+
 desc "Installs the application onto the running Android emulator."
-task :install do
+task :install => 'bin/OpenCoinage-debug.apk' do
   sh "adb -s #{ANDROID_SERIAL} install bin/*-debug.apk"
 end
 
 desc "Reinstalls the application onto the running Android emulator."
-task :reinstall do
+task :reinstall => 'bin/OpenCoinage-debug.apk' do
   sh "adb -s #{ANDROID_SERIAL} install -r bin/*-debug.apk"
 end
 
