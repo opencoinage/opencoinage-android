@@ -1,8 +1,11 @@
 OpenCoinage for Android
 =======================
 
-This is an [OpenCoinage][] client application for the [Android][] open
-mobile platform.
+This is an [OpenCoinage.org][OpenCoinage] client application for the
+[Android][] open mobile platform.
+
+_Note: this is at present pre-alpha software, and is unlikely to be of much
+interest to you. Check back later!_
 
 Dependencies
 ------------
