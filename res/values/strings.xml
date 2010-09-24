@@ -5,7 +5,7 @@
   <string name="app_name">OpenCoinage</string>
   <string name="app_title">OpenCoinage Wallet</string>
   <string name="app_version">x.y.z</string>
-  <string name="app_date">yyyy/mm/dd</string>
+  <string name="app_date">yyyy-mm-dd</string>
   <string name="about">About</string>
   <string name="about_app_title">About OpenCoinage Wallet</string>
   <string name="amount">Amount</string>
