@@ -7,6 +7,11 @@ task :emulator do
   sh "emulator -avd #{ANDROID_DEVICE}"
 end
 
+desc "Deletes all generated source code and binaries"
+task :clean do
+  sh "rm -rf bin/* gen/*"
+end
+
 desc "Builds a debug release of the application."
 task :build do
   sh "ant debug"
