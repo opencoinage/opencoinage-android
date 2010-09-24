@@ -1,6 +1,7 @@
 package org.opencoinage.android;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,7 +41,7 @@ public class MainActivity extends Activity {
   public boolean onOptionsItemSelected(MenuItem item) {
     switch (item.getItemId()) {
       case R.id.settings:
-        // TODO: start the Settings activity
+        startActivity(new Intent(MainActivity.this, SettingsActivity.class));
         return true;
       default:
         return super.onOptionsItemSelected(item);
