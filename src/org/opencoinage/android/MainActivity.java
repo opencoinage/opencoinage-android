@@ -40,23 +40,14 @@ public class MainActivity extends Activity {
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
     switch (item.getItemId()) {
+      case R.id.about:
+        startActivity(new Intent(MainActivity.this, AboutActivity.class));
+        return true;
       case R.id.settings:
         startActivity(new Intent(MainActivity.this, SettingsActivity.class));
         return true;
       default:
         return super.onOptionsItemSelected(item);
     }
-  }
-
-  /**
-   * Returns the application version number string.
-   */
-  public String getVersion() {
-    String version = "x.y.z";
-    try {
-      version = getPackageManager().getPackageInfo("org.opencoinage.android", 0).versionName;
-    }
-    catch (android.content.pm.PackageManager.NameNotFoundException e) {}
-    return version;
   }
 }
