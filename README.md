@@ -4,6 +4,8 @@ OpenCoinage for Android
 This is an [OpenCoinage.org][OpenCoinage] client application for the
 [Android][] open mobile platform.
 
+<http://opencoinage.org/apps/android>
+
 _Note: this is at present pre-alpha software, and is unlikely to be of much
 interest to you. Check back later!_
 
