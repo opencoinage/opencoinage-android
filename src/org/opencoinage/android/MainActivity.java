@@ -8,18 +8,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends ListActivity implements OnItemClickListener {
-  static final String[] CURRENCIES = new String[] {
-    "Gold Grams",     // GAU
-    "Monopoly Money", // MMX
-    "Bernanke Bucks", // BBX
-  };
-
   /**
    * Called when the activity is first created.
    *
@@ -28,7 +21,8 @@ public class MainActivity extends ListActivity implements OnItemClickListener {
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, CURRENCIES)); // TODO
+
+    setListAdapter(new CurrencyAdapter(this));
     ListView listView = getListView();
     listView.setTextFilterEnabled(true);
     listView.setOnItemClickListener(this);
@@ -40,7 +34,7 @@ public class MainActivity extends ListActivity implements OnItemClickListener {
    * @see http://developer.android.com/reference/android/widget/AdapterView.OnItemClickListener.html#onItemClick(android.widget.AdapterView<?>, android.view.View, int, long)
    */
   public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-    Toast.makeText(this, ((TextView)view).getText(), Toast.LENGTH_SHORT).show(); // TODO
+    Toast.makeText(this, getString(R.string.not_implemented_yet), Toast.LENGTH_SHORT).show(); // TODO
   }
 
   /**
@@ -66,10 +60,10 @@ public class MainActivity extends ListActivity implements OnItemClickListener {
   public boolean onOptionsItemSelected(MenuItem item) {
     switch (item.getItemId()) {
       case R.id.about:
-        startActivity(new Intent(MainActivity.this, AboutActivity.class));
+        startActivity(new Intent(this, AboutActivity.class));
         return true;
       case R.id.settings:
-        startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+        startActivity(new Intent(this, SettingsActivity.class));
         return true;
       default:
         return super.onOptionsItemSelected(item);

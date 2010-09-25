@@ -17,6 +17,7 @@
   <string name="denomination">Denomination</string>
   <string name="exchanger">Exchanger</string>
   <string name="issuer">Issuer</string>
+  <string name="not_implemented_yet">Not implemented yet</string>
   <string name="notification_settings">Notification settings</string>
   <string name="notifications">Notifications</string>
   <string name="notifications_summary">Display money notifications in the status bar.</string>
