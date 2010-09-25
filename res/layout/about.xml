@@ -9,8 +9,9 @@
     android:layout_height="wrap_content">
     <LinearLayout
       android:orientation="horizontal"
-      android:layout_width="fill_parent"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_gravity="center"
       android:paddingBottom="10dip">
       <TextView
         android:text="@string/release"
@@ -44,12 +45,14 @@
       android:autoLink="web"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_gravity="center"
       android:paddingTop="2dip"/>
     <TextView
       android:text="@string/app_email"
       android:autoLink="email"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_gravity="center"
       android:paddingTop="2dip"
       android:paddingBottom="20dip"/>
     <Button
@@ -57,6 +60,7 @@
       android:text="@string/close"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
+      android:layout_gravity="center"
       android:layout_alignParentBottom="true"/>
   </LinearLayout>
 </ScrollView>
