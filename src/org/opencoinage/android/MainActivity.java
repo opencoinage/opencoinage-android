@@ -1,12 +1,25 @@
 package org.opencoinage.android;
 
-import android.app.Activity;
+import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ListActivity implements OnItemClickListener {
+  static final String[] CURRENCIES = new String[] {
+    "Gold Grams",     // GAU
+    "Monopoly Money", // MMX
+    "Bernanke Bucks", // BBX
+  };
+
   /**
    * Called when the activity is first created.
    *
@@ -15,7 +28,19 @@ public class MainActivity extends Activity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.main);
+    setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, CURRENCIES)); // TODO
+    ListView listView = getListView();
+    listView.setTextFilterEnabled(true);
+    listView.setOnItemClickListener(this);
+  }
+
+  /**
+   * Called when an item in the list view has been clicked.
+   *
+   * @see http://developer.android.com/reference/android/widget/AdapterView.OnItemClickListener.html#onItemClick(android.widget.AdapterView<?>, android.view.View, int, long)
+   */
+  public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+    Toast.makeText(this, ((TextView)view).getText(), Toast.LENGTH_SHORT).show(); // TODO
   }
 
   /**
