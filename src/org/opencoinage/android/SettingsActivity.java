@@ -1,4 +1,5 @@
 package org.opencoinage.android;
+import org.opencoinage.*;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;

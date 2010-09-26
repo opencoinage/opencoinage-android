@@ -1,4 +1,5 @@
 package org.opencoinage.android;
+import org.opencoinage.*;
 
 import android.app.ListActivity;
 import android.content.Intent;
