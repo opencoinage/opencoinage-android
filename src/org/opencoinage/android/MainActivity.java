@@ -23,6 +23,7 @@ public class MainActivity extends ListActivity implements OnItemClickListener {
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
+    Assets.setContext(this);
     setListAdapter(new CurrencyAdapter(this));
     ListView listView = getListView();
     listView.setTextFilterEnabled(true);
